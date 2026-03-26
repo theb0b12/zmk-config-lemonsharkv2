@@ -9,19 +9,14 @@
         compatible = "zmk,combos";
 
         combo_v {
-            bindings = <&kp V>;
+            bindings = <&kp B>;
             key-positions = <45 46>;
             layers = <0>;
         };
 
-        combo_j {
-            bindings = <&kp J>;
-            key-positions = <18 17>;
-        };
-
-        middle {
-            bindings = <&mkp MB3>;
-            key-positions = <34 35>;
+        combo_n {
+            bindings = <&kp N>;
+            key-positions = <51 52>;
         };
     };
 

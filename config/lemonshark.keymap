@@ -106,14 +106,14 @@
 
         base {
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp C_VOL_UP
-                                                                          &kp EQUAL  &kp N6    &kp N7  &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB           &kp Q   &kp W   &kp E   &kp R   &kp T     &kp C_VOL_DN
-                                                                          &kp MINUS  &kp Y     &kp U   &kp I      &kp O    &kp P     &trans
+&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans
+                                                                       &kp EQUAL  &kp N6    &kp N7  &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB           &kp Q   &kp W   &kp E   &kp R   &kp T     &kp GRAVE
+                                                                       &kp MINUS  &kp Y     &kp U   &kp I      &kp O    &kp P     &kp SQT
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F   &kp G     &kp RET
-                                                                          &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &mo 4
+                                                                       &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &mo 3
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V   &kp LGUI  &mo 1
-                                                                          &mo 2      &kp RALT  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                                                                       &mo 2      &kp RALT  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
             >;
 
             label = "Default";
@@ -149,79 +149,19 @@
             label = "nav";
         };
 
-        games {
-            bindings = <
-&kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &trans
-                                                               &trans  &trans  &trans    &trans    &trans     &trans  &trans
-&kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T      &trans
-                                                               &trans  &trans  &trans    &trans    &trans     &trans  &trans
-&kp LCTRL   &kp A   &kp S   &kp D   &kp F   &kp G      &trans
-                                                               &trans  &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans  &to 0
-&kp LSHIFT  &kp Z   &kp X   &kp C   &kp V   &kp LCTRL  &mo 5
-                                                               &trans  &trans  &trans    &kp DOWN  &trans     &trans  &to 4
-            >;
-
-            label = "WASD";
-        };
-
         menu {
             bindings = <
-&studio_unlock  &trans        &trans        &trans        &trans        &trans        &trans
-                                                                                                  &trans      &trans  &trans        &trans  &trans  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &bt BT_CLR    &trans
-                                                                                                  &trans      &trans  &trans        &trans  &trans  &trans  &trans
-&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_PRV
-                                                                                                  &bt BT_NXT  &trans  &game_mode 3  &to 0   &to 6   &trans  &to 0
-&trans          &trans        &trans        &trans        &trans        &trans        &trans
-                                                                                                  &trans      &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_PRV
+                                                                                          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "menu";
-        };
-
-        game_f {
-            bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F11  &trans
-                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans
-                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans
-                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &trans
-                                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "g_function";
-        };
-
-        onshape {
-            bindings = <
-&trans     &trans  &trans  &trans  &trans  &trans     &trans
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RET    &kp M   &kp F   &kp Y   &kp L   &kp BSPC   &trans
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RALT   &kp A   &kp R   &kp S   &kp E   &to 7      &kp SPACE
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&kp LSHFT  &kp Z   &kp X   &kp C   &kp D   &kp LCTRL  &mo 1
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "CAD";
-        };
-
-        onshape_sketch {
-            bindings = <
-&kp ESC    &trans  &trans  &trans  &trans  &to 6      &trans
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RET    &kp B   &kp A   &kp A   &kp T   &kp BSPC   &trans
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp RALT   &kp F   &kp R   &kp G   &kp L   &kp DOT    &kp SPACE
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp Z   &kp P   &kp C   &kp Q   &kp LCTRL  &mo 1
-                                                                 &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-
-            label = "CADsketch";
         };
     };
 

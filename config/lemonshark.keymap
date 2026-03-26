@@ -117,7 +117,7 @@
 &kp TAB           &kp Q   &kp W   &kp E   &kp R   &kp T     &kp C_VOL_DN
                                                                           &kp MINUS  &kp Y     &kp U   &kp I      &kp O    &kp P     &trans
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F   &kp G     &kp RET
-                                                                          &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &trans
+                                                                          &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &mo 4
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V   &kp LGUI  &mo 1
                                                                           &trans     &kp RALT  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
             >;

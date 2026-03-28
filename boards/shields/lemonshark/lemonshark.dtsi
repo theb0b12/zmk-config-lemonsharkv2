@@ -4,8 +4,8 @@
 / {
     chosen {
         zephyr,display = &oled;
-    }; 
-{
+    };
+
     matrix_transform0: matrix_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <14>;

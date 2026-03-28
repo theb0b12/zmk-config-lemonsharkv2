@@ -52,6 +52,8 @@
     };
 };
 
-&chosen {
-    zephyr,display = &ssd1306;
+/ {
+    chosen {
+        zephyr,display = &ssd1306;
+    };
 };

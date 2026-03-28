@@ -21,15 +21,13 @@
               <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
               <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
-
 };
-
 
 &physical_layout_lemonshark {
     kscan = <&kscan0>;
 };
 
-&i2c1 {
+&i2c0 {
     status = "okay";
 
     ssd1306: ssd1306@3c {
@@ -54,9 +52,6 @@
     };
 };
 
-/ {
-    chosen {
-        zephyr,display = &ssd1306;
-    };
+&chosen {
+    zephyr,display = &ssd1306;
 };
-

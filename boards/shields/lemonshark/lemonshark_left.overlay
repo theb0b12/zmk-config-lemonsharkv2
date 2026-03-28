@@ -29,36 +29,31 @@
     kscan = <&kscan0>;
 };
 
-&i2c0 {
-    status = "okay";
+&{/soc/i2c@40003000/ssd1306@3c} {
+    compatible = "solomon,ssd1306fb-i2c";
+    reg = <0x3c>;
 
-    ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb-i2c";
-        reg = <0x3c>;
-        label = "SSD1306";
+    width = <128>;
+    height = <32>;
 
-        width = <128>;
-        height = <32>;
+    segment-offset = <0>;
+    page-offset = <0>;
 
-        segment-offset = <0>;
-        page-offset = <0>;
+    display-offset = <0>;
+    multiplex-ratio = <31>;
 
-        display-offset = <0>;
-        multiplex-ratio = <31>;
+    prechargep = <0x22>;
 
-        prechargep = <0x22>;          // 🔴 REQUIRED (your error)
-        segment-remap;
-        com-invdir;
-
-        com-sequential;
-        com-lr-remap;
-
-        inversion-on;
-    };
+    segment-remap;
+    com-invdir;
+    com-sequential;
+    com-lr-remap;
+    inversion-on;
 };
 
- / {
+/ {
     chosen {
-        zephyr,display = &ssd1306;
+        zephyr,display = &{/soc/i2c@40003000/ssd1306@3c};
     };
 };
+

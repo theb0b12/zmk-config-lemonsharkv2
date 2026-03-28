@@ -32,3 +32,7 @@
 &physical_layout_lemonshark {
     kscan = <&kscan0>;
 };
+
+chosen {
+    zephyr,display = &oled;
+};

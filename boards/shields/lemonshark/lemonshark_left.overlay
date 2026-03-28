@@ -29,7 +29,7 @@
     kscan = <&kscan0>;
 };
 
-&i2c0 {
+&i2c1 {
     status = "okay";
 
     ssd1306: ssd1306@3c {

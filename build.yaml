@@ -21,19 +21,19 @@
 include:
 
   - board: nice_nano_v2
-    shield: lemonshark_left nice_oled
+    shield: lemonshark_left 
 
 # To build with ZMK Studio support, uncomment the following block
 # by removing the leading '#' from each line.
 
   - board: nice_nano_v2
-    shield: lemonshark_left nice_oled
+    shield: lemonshark_left 
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: lemonshark_left_with_studio
 
   - board: nice_nano_v2
-    shield: lemonshark_right nice_oled
+    shield: lemonshark_right 
 
   - board: nice_nano_v2
     shield: settings_reset

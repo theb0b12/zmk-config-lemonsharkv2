@@ -23,6 +23,20 @@
             , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
+&i2c0 {
+    ssd1306: ssd1306@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+    };
+};
+
+chosen {
+    zephyr,display = &ssd1306;
+};
+
 };
 
 &matrix_transform0 {
@@ -33,6 +47,3 @@
     kscan = <&kscan0>;
 };
 
-chosen {
-    zephyr,display = &oled;
-};

@@ -47,6 +47,7 @@
 
         segment-remap;
         com-invdir;
+        com-seg-direction;
 
         prechargep = <0x22>;
     };

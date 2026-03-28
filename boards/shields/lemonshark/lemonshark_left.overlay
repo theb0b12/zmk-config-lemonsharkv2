@@ -23,20 +23,10 @@
     };
 
     chosen {
-        zephyr,display = &ssd1306;
+        zephyr,display = &nice_oled;
     };
 };
 
-/* ⚠️ OUTSIDE root node (correct overlay style) */
-&i2c0 {
-    ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb-i2c";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-offset = <0>;
-    };
-};
 
 &physical_layout_lemonshark {
     kscan = <&kscan0>;

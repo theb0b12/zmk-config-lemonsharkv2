@@ -23,7 +23,7 @@
     };
 
     chosen {
-        zephyr,display = &nice_oled;
+        zephyr,display = &oled_display;
     };
 };
 

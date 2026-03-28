@@ -20,8 +20,8 @@
 ---
 include:
 
-  - board: nice_nano_v2 nice_oled
-    shield: lemonshark_left 
+  - board: nice_nano_v2
+    shield: lemonshark_left nice_oled
 
 # To build with ZMK Studio support, uncomment the following block
 # by removing the leading '#' from each line.

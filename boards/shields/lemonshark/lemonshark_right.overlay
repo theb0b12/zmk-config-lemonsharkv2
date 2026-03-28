@@ -51,12 +51,11 @@
         display-offset = <0>;
 
         multiplex-ratio = <31>;
-
+        display-offset = <0>;
+        page-offset = <0>;
+        segment-offset = <0>;
         segment-remap;
         com-invdir;
-        com-seg-direction;
-
-        prechargep = <0x22>;
     };
 };
 

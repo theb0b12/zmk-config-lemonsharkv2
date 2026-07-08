@@ -16,6 +16,36 @@
             bindings = <&kp N>;
             key-positions = <51 52>;
         };
+
+        par1 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <18 17>;
+        };
+
+        par2 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <23 24>;
+        };
+
+        cur1 {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <45 46>;
+        };
+
+        cur2 {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <51 52>;
+        };
+
+        bracket1 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        bracket2 {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <37 38>;
+        };
     };
 
     behaviors {
@@ -95,7 +125,14 @@
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LALT>;
+
             label = "ALT_TAB";
         };
     };
@@ -105,10 +142,14 @@
 
         base {
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans                                                                 &kp EQUAL  &kp N6    &kp N7  &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB           &kp Q   &kp W   &kp E   &kp R   &kp T     &kp GRAVE                                                              &kp MINUS  &kp Y     &kp U   &kp I      &kp O    &kp P     &kp SQT
-&kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F   &kp G     &kp RET                                                                &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &mo 3
-&kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V   &kp LGUI  &mo 1                                                                  &mo 2      &kp RALT  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+&kp ESC           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans
+                                                                       &kp EQUAL  &kp N6    &kp N7  &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB           &kp Q   &kp W   &kp E   &kp R   &kp T     &kp GRAVE
+                                                                       &kp MINUS  &kp Y     &kp U   &kp I      &kp O    &kp P     &kp SQT
+&kp LEFT_SHIFT    &kp A   &kp S   &kp D   &kp F   &kp G     &kp RET
+                                                                       &kp SPACE  &kp H     &kp J   &kp K      &kp L    &kp SEMI  &mo 3
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C   &kp V   &kp LGUI  &mo 1
+                                                                       &mo 2      &kp RALT  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
             >;
 
             label = "Default";
@@ -116,10 +157,14 @@
 
         brackets {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                               &trans  &trans  &trans                &trans                 &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                               &trans  &trans  &kp LBRC              &kp RBRC               &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                               &trans  &trans  &kp LEFT_BRACKET      &kp RBKT               &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                               &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans  &trans  &trans                &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans  &trans  &kp LBRC              &kp RBRC               &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans  &trans  &kp LEFT_BRACKET      &kp RBKT               &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                        &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans
             >;
 
             label = "upper";
@@ -127,10 +172,14 @@
 
         nav {
             bindings = <
-&trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans                                                              &trans  &trans  &trans          &trans    &trans           &trans  &trans
-&trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans                                                              &trans  &trans  &trans          &trans    &trans           &trans  &trans
-&trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans                                                              &trans  &trans  &trans          &kp UP    &trans           &trans  &trans
-&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans                                                              &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &kp F1   &kp F2   &kp F3   &trans  &trans
+                                                           &trans  &trans  &trans          &trans    &trans           &trans  &trans
+&trans  &trans  &kp F4   &kp F5   &kp F6   &trans  &trans
+                                                           &trans  &trans  &trans          &trans    &trans           &trans  &trans
+&trans  &trans  &kp F7   &kp F8   &kp F9   &trans  &trans
+                                                           &trans  &trans  &trans          &kp UP    &trans           &trans  &trans
+&trans  &trans  &kp F10  &kp F11  &kp F12  &trans  &trans
+                                                           &trans  &trans  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT_ARROW  &trans  &trans
             >;
 
             label = "nav";
@@ -138,10 +187,14 @@
 
         menu {
             bindings = <
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                                                   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &trans                                                                   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_PRV                                                               &bt BT_NXT  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &trans        &trans                                                                   &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &bt BT_CLR    &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_PRV
+                                                                                          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans
+                                                                                          &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "menu";

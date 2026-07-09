@@ -55,7 +55,7 @@
         };
 
         alttab {
-            bindings = <&mt LEFT_ALT TAB>;
+            bindings = <&alttab>;
             key-positions = <48 14>;
             layers = <0>;
         };
@@ -96,6 +96,15 @@
             hold-trigger-key-positions = <32>;
             tapping-term-ms = <300>;
             flavor = "tap-preferred";
+        };
+    };
+
+    macros {
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp TAB>;
+            label = "ALTTAB";
         };
     };
 
